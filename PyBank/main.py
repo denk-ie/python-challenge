@@ -4,13 +4,29 @@ import csv
 csvpath = os.path.join('Resources', 'budget_data.csv')
 output_path = os.path.join('analysis', 'analysis.txt')
 
-print("Financial Analysis")
-print("----------------------------")
-
 with open(csvpath) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter = ',')
     
     csv_header = next(csvreader)
     
-    #for row in csvreader:
+    totalmonths = sum(1 for row in csvreader)
+    
+    totalprofitloss = sum(1 for column[2] in csvreader)
+    
+    
+with open(output_path, 'w', newline='') as csvfile:
+
+    csvwriter = csv.writer(csvfile)
+
+    csvwriter.writerow("Financial Analysis")
+
+    csvwriter.writerow("----------------------------")
+
+#print("Financial Analysis")
+#print("----------------------------")    
+#print("Total Months: ", totalmonths)
+#print("Total: $", totalprofitloss)
+#print("Average Change: ")
+#print("Greatest Increase in Profits: ")
+#print("Greatest Decrease in Profits: ")
