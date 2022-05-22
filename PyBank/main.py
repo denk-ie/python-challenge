@@ -22,6 +22,8 @@ with open(output_path, 'w', newline='') as csvfile:
     csvwriter.writerow("Financial Analysis")
 
     csvwriter.writerow("----------------------------")
+    
+    csvwriter.writerow("Total Months: ", totalmonths)
 
 #print("Financial Analysis")
 #print("----------------------------")    
