@@ -45,8 +45,8 @@ print("----------------------------")
 print("Total Months: ", totalmonths)
 print("Total: ", totalnetamount)
 print("Average Change: ", "$",round(averagechange, 2))
-print(f"Greatest Increase in Profits: , {max_change_month}, (${max_change})")
-print(f"Greatest Decrease in Profits: , {min_change_month}, (${min_change})")
+print(f"Greatest Increase in Profits: {max_change_month} (${max_change})")
+print(f"Greatest Decrease in Profits: {min_change_month} (${min_change})")
 
 with open(output_path, 'w', newline='') as csvfile:
 
@@ -56,5 +56,5 @@ with open(output_path, 'w', newline='') as csvfile:
     csvfile.write(f"Total Months: {totalmonths} \n")
     csvfile.write(f"Total:  ${totalnetamount} \n")
     csvfile.write(f"Average Change:  ${averagechange:2f} \n")
-    csvfile.write(f"Greatest Increase in Profits: , {max_change_month}, (${max_change}) \n")
-    csvfile.write(f"Greatest Decrease in Profits: , {min_change_month}, (${min_change}) \n")
+    csvfile.write(f"Greatest Increase in Profits: {max_change_month} (${max_change}) \n")
+    csvfile.write(f"Greatest Decrease in Profits: {min_change_month} (${min_change}) \n")
